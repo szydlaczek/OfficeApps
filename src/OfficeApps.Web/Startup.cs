@@ -2,8 +2,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OfficeApps.Persistence;
 
 namespace OfficeApps.Web
 {
@@ -26,6 +28,8 @@ namespace OfficeApps.Web
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+            services.AddDbContext<OfficeDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("OfficeDatabase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

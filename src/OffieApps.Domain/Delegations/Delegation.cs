@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OffieApps.Domain.Shared;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
