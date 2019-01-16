@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\OfficeApps.Persistence\OfficeApps.Persistence.csproj" />
+    <ProjectReference Include="..\OffieApps.Domain\OffieApps.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
